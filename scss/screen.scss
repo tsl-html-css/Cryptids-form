@@ -1,0 +1,40 @@
+@import "reset";
+
+html {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+body {
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+/* CREATURES */
+
+.creature {
+    opacity: .75;
+    display: block;
+    position: relative;
+    display: inline-block;
+
+    img {
+        border-radius: 50%;
+        display: block;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    // This selector needs to be more specific. Right now it
+    // shows a checkmark on every cryptid. It should only show
+    // a checkmark for the cryptid that's chosen.
+    span:after {
+        content:"✓";
+        color: white;
+        font-size: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}
