@@ -62,7 +62,23 @@ html {
 }
 
 body {
-  font-family: 'IM Fell DW Pica SC', serif;
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  background: #243485;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  text-align: center;
+  padding: .8em 0;
+  color: white;
+  margin-bottom: 1em;
 }
 
 /* CREATURES */
@@ -71,21 +87,107 @@ body {
   display: block;
   position: relative;
   display: inline-block;
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 1rem;
+}
+.creature:nth-of-type(3n) {
+  margin-right: 0;
+}
+.creature input[type=radio] {
+  display: none;
 }
 .creature img {
   border-radius: 50%;
   display: block;
+  max-width: 100%;
 }
 .creature:hover {
   opacity: 1;
 }
-.creature span:after {
+.creature input:checked + span:after {
   content: "✓";
   color: white;
   font-size: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -50px;
+  margin-left: -38px;
+}
+
+.cryptid-form {
+  font-size: 0;
+}
+
+fieldset {
+  margin-bottom: 1rem;
+}
+
+.field-group-name {
+  display: inline-block;
+  width: 30%;
+  font-size: 1rem;
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.form-content {
+  display: inline-block;
+  width: 70%;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+.text-box {
+  width: 100%;
+  border: 1px dashed #777;
+  padding: .4em .5em;
+  border-radius: 4px;
+  font-size: .9rem;
+  margin-bottom: .4em;
+  font-family: "IM Fell DW Pica SC", serif;
+  text-transform: uppercase;
+}
+
+.accessories .form-content {
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+.accessories label {
+  margin-right: 10px;
+}
+
+select {
+  font-family: "IM Fell DW Pica SC", serif;
+  font-size: 1.1rem;
+  padding: .4em;
+}
+
+textarea {
+  width: 100%;
+  border: 1px dashed #777;
+  padding: .4em .5em;
+  border-radius: 4px;
+  font-size: .9rem;
+  font-family: "IM Fell DW Pica SC", serif;
+  text-transform: uppercase;
+  height: 6em;
+}
+
+.buttons {
+  margin-left: 30%;
+}
+
+button {
+  border: none;
+  font-family: "IM Fell DW Pica SC", serif;
+  padding: .5em;
+  background: #357EC5;
+  color: white;
+  font-size: 1.0em;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=screen.css.map */
